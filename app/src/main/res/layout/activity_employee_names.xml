@@ -2,7 +2,7 @@
 <layout>
 
 
-<androidx.fragment.app.FragmentContainerView
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,8 +10,6 @@
     tools:context=".employee_names"
     android:id="@+id/first_activity"
     >
-
-
 <!--    <fragment-->
 <!--        android:id="@+id/fragment_emp_names"-->
 <!--        android:layout_width="match_parent"-->
@@ -23,6 +21,6 @@
 
 
 
-</androidx.fragment.app.FragmentContainerView>
+</FrameLayout>
 
 </layout>
