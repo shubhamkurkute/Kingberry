@@ -13,7 +13,7 @@ class employee_names : AppCompatActivity() {
         setContentView(R.layout.activity_employee_names)
 
         supportFragmentManager.beginTransaction().add(R.id.first_activity,employeeNameFragment)
-            .addToBackStack(null)
+            
             .commit()
 
 

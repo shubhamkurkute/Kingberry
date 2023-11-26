@@ -24,7 +24,8 @@ class MainActivity : AppCompatActivity() {
         binding.button.setOnClickListener {
             userName = binding.username.text.toString()
             passWord = binding.pasword.text.toString()
-            checkCredentials()
+//            checkCredentials()
+            nextActivity()
 
         }
 
