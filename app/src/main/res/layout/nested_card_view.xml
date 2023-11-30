@@ -15,8 +15,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-
+        android:layout_marginStart="4dp"
         android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
         >
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -27,17 +28,15 @@
 
             <TextView
                 android:id="@+id/subAreaName"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:paddingTop="8dp"
                 android:paddingBottom="8dp"
                 android:text="Katraj"
                 android:textColor="@color/black"
                 android:textSize="16dp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/locIcon"
                 app:layout_constraintTop_toTopOf="parent">
 
 
@@ -46,7 +45,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
                 android:layout_width="0dp"
-                android:layout_height="4dp"
+                android:layout_height="2dp"
                 android:backgroundTint="#7D2323"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -55,13 +54,24 @@
             <ImageView
                 android:id="@+id/locIcon"
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="4dp"
                 android:paddingTop="4dp"
                 android:paddingBottom="4dp"
-                app:layout_constraintBottom_toBottomOf="@id/subAreaName"
-                app:layout_constraintEnd_toStartOf="@+id/subAreaName"
-                app:layout_constraintTop_toTopOf="@+id/subAreaName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/location" />
+
+            <TextView
+                android:id="@+id/doc_desig"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="(Orthopedic)"
+                android:textSize="10dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/subAreaName"
+                app:layout_constraintStart_toEndOf="@+id/subAreaName"
+                app:layout_constraintTop_toTopOf="@+id/subAreaName" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

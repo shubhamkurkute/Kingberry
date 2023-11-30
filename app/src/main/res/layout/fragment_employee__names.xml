@@ -19,6 +19,7 @@
         >
         <include
             layout="@layout/navigation_bar"
+            android:id="@+id/toolbar"
             >
 
         </include>
