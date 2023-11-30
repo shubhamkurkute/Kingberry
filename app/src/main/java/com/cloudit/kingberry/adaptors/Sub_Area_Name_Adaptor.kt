@@ -11,12 +11,12 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudit.kingberry.R
 import com.cloudit.kingberry.fragments.Area_Names
+import com.cloudit.kingberry.fragments.Doctors_Names
 import com.cloudit.kingberry.model.SubAreasModel
 
 
 class Sub_Area_Name_Adaptor(private var context : Area_Names,subAreaNameArrayList: ArrayList<SubAreasModel>):
     RecyclerView.Adapter<Sub_Area_Name_Adaptor.ViewHolder>() {
-
     private var subAreaNameArrayList :ArrayList<SubAreasModel>
 
 
@@ -26,9 +26,11 @@ class Sub_Area_Name_Adaptor(private var context : Area_Names,subAreaNameArrayLis
 
             val subAreaText:TextView
             val locIcon:ImageView
+            val docdesig : TextView
             init {
                 this.subAreaText = view.findViewById(R.id.subAreaName)
                 this.locIcon = view.findViewById(R.id.locIcon)
+                this.docdesig = view.findViewById(R.id.doc_desig)
             }
 
 
@@ -47,12 +49,18 @@ class Sub_Area_Name_Adaptor(private var context : Area_Names,subAreaNameArrayLis
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
+        holder.docdesig.visibility = View.GONE
         val subAreaModel : SubAreasModel = subAreaNameArrayList[position]
         holder.subAreaText.setText(subAreaModel.getsubAreaName())
         holder.locIcon.setImageResource(subAreaModel.getlocIcon())
         holder.subAreaText.setOnClickListener {
-            Toast.makeText(context.requireContext(),"hello",Toast.LENGTH_SHORT).show()
+            val mmfragment = Doctors_Names()
+            context.parentFragmentManager?.beginTransaction()?.replace(R.id.first_activity,mmfragment)
+                ?.addToBackStack(null)
+                ?.commit()
+
+
+
         }
 
 
