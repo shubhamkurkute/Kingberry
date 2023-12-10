@@ -71,8 +71,8 @@
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
             android:src="@drawable/location"
             app:layout_constraintEnd_toEndOf="@+id/imageView3"
             app:layout_constraintStart_toStartOf="@+id/imageView3"
@@ -81,8 +81,8 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
             android:src="@drawable/doc_icon"
 
 
@@ -92,7 +92,7 @@
         <ImageView
             android:id="@+id/imageView9"
             android:layout_width="0dp"
-            android:layout_height="36dp"
+            android:layout_height="28dp"
             android:src="@drawable/clock"
             app:layout_constraintEnd_toEndOf="@+id/imageView8"
             app:layout_constraintStart_toStartOf="@+id/imageView8"
@@ -105,7 +105,7 @@
             android:layout_height="0dp"
             android:text= "Bharati Vidyapeeth,Pune"
             app:layout_constraintBottom_toBottomOf="@+id/imageView8"
-            android:textSize="20dp"
+            android:textSize="16dp"
             android:layout_marginStart="4dp"
             android:gravity="center_vertical"
             android:paddingStart="4dp"
@@ -119,7 +119,7 @@
             android:layout_height="0dp"
             android:text= "10:00am - 2:00am"
             app:layout_constraintBottom_toBottomOf="@+id/imageView9"
-            android:textSize="20dp"
+            android:textSize="16dp"
             android:layout_marginStart="4dp"
             android:gravity="center_vertical"
             android:paddingStart="4dp"
@@ -133,7 +133,7 @@
             android:layout_height="0dp"
             android:text="Dr. Shubham Kurkute"
             app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-            android:textSize="20dp"
+            android:textSize="16dp"
             android:gravity="center_vertical"
             android:paddingStart="4dp"
             android:layout_marginStart="4dp"
@@ -157,16 +157,15 @@
         app:layout_constraintTop_toBottomOf="@+id/cons" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
+        android:id="@+id/prodRV"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_margin="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView3"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"/>
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

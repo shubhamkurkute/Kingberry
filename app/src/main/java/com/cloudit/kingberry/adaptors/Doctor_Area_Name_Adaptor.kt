@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.cloudit.kingberry.R
 import com.cloudit.kingberry.fragments.Doctors_Names
+import com.cloudit.kingberry.fragments.Product_Names
 import com.cloudit.kingberry.model.AreaNamesModel
 import com.cloudit.kingberry.model.SubAreasModel
 
@@ -57,7 +58,12 @@ RecyclerView.Adapter<Doctor_Area_Name_Adaptor.ViewHolder>(){
 
 
 
+
         holder.doc_name.setOnClickListener {
+            val mfragment = Product_Names()
+            context.parentFragmentManager.beginTransaction().replace(R.id.first_activity,mfragment)
+                .addToBackStack(null)
+                .commit()
 
 
 
